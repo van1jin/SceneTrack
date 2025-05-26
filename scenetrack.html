@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      conent="width=device-width, initial-scale=1.0">
+	<title>Scene Track ~ v.0.0.1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <span><button class="btn" id="start">
+				Start</button></span>
+		<span class="digit" id="hr">
+			00</span>
+		<span class="txt">Hr</span>
+		<span class="digit" id="min">
+			00</span>
+		<span class="txt">Min</span>
+		<span class="digit" id="sec">
+			00</span>
+		<span class="txt">Sec</span>
+		<span class="digit" id="count">
+			00</span>
+		<span><button class="btn" id="stop">
+				Stop</button></span>
+		<span><button class="btn" id="reset">
+				Reset</button></span>
+		<span style="margin-left: 70px"><button class="btn" id="langbt">
+		    Deutsch</button></span>
+  </div>
+  <div id="btn-en" style="display: block">
+	  <div class="buttons">
+		  <div class="general">
+			  <button class="btn" id="ssss-en">
+				  4S</button>
+			  <button class="btn" id="notarzt-en">
+				  Doc</button>
+			  <button class="btn" id="ansprache-en">
+				  Ansprache</button>
+			  <button class="btn" id="bewusstsein-en">
+				  Conscious?</button>
+			  <button class="btn" id="sampler-en">
+				  SAMPLER</button>
+			  <button class="btn" id="opqrst-en">
+				  OPQRST</button>
+			  <button class="btn" id="reeval-en">
+				  Reevaluation</button>
+			  <button class="btn" id="zugang-en">
+				  iv/io started</button>
+		  </div>
+		  <br>
+		  <div class="x">
+			  <button class="btn" id="critical-en">
+				  crit Bleed?</button>
+		  </div>
+		  <br>
+		  <div class="a">
+			  <button class="btn" id="atemweg-en">
+				  Airway?</button>
+		  </div>
+		  <br>
+		  <div class="b">
+			  <button class="btn" id="af-en">
+				  RR</button>
+			  <button class="btn" id="auskultation-en">
+				  Auskultation</button>
+			  <button class="btn" id="spo-en">
+				  SpO2</button>
+		  </div>
+		  <br>
+		  <div class="c">
+			  <button class="btn" id="puls-en">
+				  Pulse?</button>
+			  <button class="btn" id="hf-en">
+				  HR</button>
+			  <button class="btn" id="rr-en">
+				  BP</button>
+			  <button class="btn" id="ekg-en">
+				  ECG</button>
+			  <button class="btn" id="recap-en">
+				  Recap</button>
+		  </div>
+		  <br>
+		  <div class="d">
+			  <button class="btn" id="gcs-en">
+				  GCS</button>
+			  <button class="btn" id="bz-en">
+				  Sugar</button>
+			  <button class="btn" id="fast-en">
+				  FAST</button>
+		  </div>
+		  <br>
+		  <div class="e">
+			  <button class="btn" id="verletzungen-en">
+				  Injuries?</button>
+			  <button class="btn" id="temp-en">
+				  Temperature</button>
+		  </div>
+		  <br>
+		  <div class="rea">
+			  <button class="btn" id="erkannt-en">
+				  Code?</button>
+			  <button class="btn" id="patches-en">
+				  Patches</button>
+			  <button class="btn" id="schock-en">
+				  Shock</button>
+			  <button class="btn" id="analyse-en">
+				  Analysis</button>
+			  <button class="btn" id="supra-en">
+				  Adrenalin</button>
+			  <button class="btn" id="amio-en">
+				  Amiodaron</button>
+			  <button class="btn" id="tubus-en">
+				  Intubation</button>
+			  <button class="btn" id="rosc-en">
+				  ROSC</button>
+		  </div>
+	  </div>
+	  <br>
+	  <div style="font-size: 25px; padding: 0px 0px 0px 20px" class="others">
+		  <label for="andere">Other Entries:</label>
+		  <input type="text" id="andere-en" name="andere" style="font-size: 20px">
+		  <button style="font-size: 20px" id="other-en">
+			  Enter</button>
+	  </div>
+	</div>
+	<div id="btn-de" style="display: none">
+	  <div class="buttons">
+		  <div class="general">
+			  <button class="btn" id="ssss-de">
+				  4S</button>
+			  <button class="btn" id="notarzt-de">
+				  NA</button>
+			  <button class="btn" id="ansprache-de">
+				  Ansprache</button>
+			  <button class="btn" id="bewusstsein-de">
+				  Bewusstein</button>
+			  <button class="btn" id="sampler-de">
+				  SAMPLER</button>
+			  <button class="btn" id="opqrst-de">
+				  OPQRST</button>
+			  <button class="btn" id="reeval-de">
+				  Reevaluation</button>
+			  <button class="btn" id="zugang-de">
+				  iv/io-Zugang</button>
+		  </div>
+		  <br>
+		  <div class="x">
+			  <button class="btn" id="critical-de">
+				  Blutung?</button>
+		  </div>
+		  <br>
+		  <div class="a">
+			  <button class="btn" id="atemweg-de">
+				  Atemweg?</button>
+		  </div>
+		  <br>
+		  <div class="b">
+			  <button class="btn" id="af-de">
+				  AF</button>
+			  <button class="btn" id="auskultation-de">
+				  Auskultation</button>
+			  <button class="btn" id="spo-de">
+				  SpO2</button>
+		  </div>
+		  <br>
+		  <div class="c">
+			  <button class="btn" id="puls-de">
+				  Puls?</button>
+			  <button class="btn" id="hf-de">
+				  HF</button>
+			  <button class="btn" id="rr-de">
+				  RR</button>
+			  <button class="btn" id="ekg-de">
+				  EKG</button>
+			  <button class="btn" id="recap-de">
+				  Recap</button>
+		  </div>
+		  <br>
+		  <div class="d">
+			  <button class="btn" id="gcs-de">
+				  GCS</button>
+			  <button class="btn" id="bz-de">
+				  BZ</button>
+			  <button class="btn" id="fast-de">
+				  FAST</button>
+		  </div>
+		  <br>
+		  <div class="e">
+			  <button class="btn" id="verletzungen-de">
+				  Verletzungen?</button>
+			  <button class="btn" id="temp-de">
+				  Temperatur</button>
+		  </div>
+		  <br>
+		  <div class="rea">
+			  <button class="btn" id="erkannt-de">
+				  Rea erkannt</button>
+			  <button class="btn" id="patches-de">
+				  Patches</button>
+			  <button class="btn" id="schock-de">
+				  Schock</button>
+			  <button class="btn" id="analyse-de">
+				  Analyse</button>
+			  <button class="btn" id="supra-de">
+				  Adrenalin</button>
+			  <button class="btn" id="amio-de">
+				  Amiodaron</button>
+			  <button class="btn" id="tubus-de">
+				  Intubation</button>
+			  <button class="btn" id="rosc-de">
+				  ROSC</button>
+		  </div>
+	  </div>
+	  <br>
+	  <div style="font-size: 25px; padding: 0px 0px 0px 20px" class="others">
+		  <label for="andere">Andere Eingaben:</label>
+		  <input type="text" id="andere-de" name="andere" style="font-size: 20px">
+		  <button style="font-size: 20px" id="other-de">
+			  Enter</button>
+	  </div>
+	</div>
+	<br>
+	<div class="log">
+	  <h1 class="clog">Time Log</h1>
+	  <br>
+	  <span class="clog-txt" id="log-txt">
+	  </span>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
