@@ -48,7 +48,23 @@ body {
 	color: white;
 }
 
-.btn {
+.btn-timer {
+	width: 150px;
+	padding: 10px 15px;
+	margin: 2px 10px 5px 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	cursor: pointer;
+	font-size: 20px;
+	transition: 0.5s;
+	color: white;
+	font-weight: 500;
+	color: rgb(0, 0, 0);
+}
+
+.btn-task {
 	width: 150px;
 	padding: 10px 15px;
 	margin: 2px 10px 5px 10px;
@@ -95,126 +111,6 @@ body {
 	background-color: #660a00;
 }
 
-#ssss:active {
-	background-color: #4d79ff;
-}
-
-#notarzt:active {
-  background-color: #4d79ff;
-}
-
-#ansprache:active {
-  background-color: #4d79ff;
-}
-
-#bewusstsein:active {
-  background-color: #4d79ff;
-}
-
-#sampler:active {
-  background-color: #4d79ff;
-}
-
-#opqrst:active {
-  background-color: #4d79ff;
-}
-
-#reeval:active {
-  background-color: #4d79ff;
-}
-
-#zugang:active {
-  background-color: #4d79ff;
-}
-
-#critical:active {
-  background-color: #4d79ff;
-}
-
-#atemweg:active {
-  background-color: #4d79ff;
-}
-
-#af:active {
-  background-color: #4d79ff;
-}
-
-#auskultation:active {
-  background-color: #4d79ff;
-}
-
-#spo:active {
-  background-color: #4d79ff;
-}
-
-#puls:active {
-  background-color: #4d79ff;
-}
-
-#hf:active {
-  background-color: #4d79ff;
-}
-
-#rr:active {
-  background-color: #4d79ff;
-}
-
-#ekg:active {
-  background-color: #4d79ff;
-}
-
-#recap:active {
-  background-color: #4d79ff;
-}
-
-#gcs:active {
-  background-color: #4d79ff;
-}
-
-#bz:active {
-  background-color: #4d79ff;
-}
-
-#fast:active {
-  background-color: #4d79ff;
-}
-
-#verletzungen:active {
-  background-color: #4d79ff;
-}
-
-#temp:active {
-  background-color: #4d79ff;
-}
-
-#erkannt:active {
-  background-color: #4d79ff;
-}
-
-#patches:active {
-  background-color: #4d79ff;
-}
-
-#schock:active {
-  background-color: #4d79ff;
-}
-
-#analyse:active {
-  background-color: #4d79ff;
-}
-
-#supra:active {
-  background-color: #4d79ff;
-}
-
-#amio:active {
-  background-color: #4d79ff;
-}
-
-#tubus:active {
-  background-color: #4d79ff;
-}
-
-#rosc:active {
+.btn-task:active {
   background-color: #4d79ff;
 }

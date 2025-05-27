@@ -47,6 +47,20 @@ langBtn.addEventListener('click', function () {
     }
 });
 
+document.getElementById('andere-de').addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById('other-de').click();
+    }
+});
+
+document.getElementById('andere-en').addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById('other-en').click();
+    }
+});
+
 document.getElementById('ssss-en').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | 4S<br>";
 	document.getElementById('log-txt').innerHTML = logString;
@@ -157,7 +171,6 @@ document.getElementById('af-de').addEventListener('click', function () {
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-
 document.getElementById('auskultation-en').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Auskultation der Lunge<br>";
 	document.getElementById('log-txt').innerHTML = logString;
@@ -168,109 +181,206 @@ document.getElementById('auskultation-de').addEventListener('click', function ()
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
+document.getElementById('spo-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Attach SpO2-Sensor<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
 
-document.getElementById('spo').addEventListener('click', function () {
+document.getElementById('spo-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Anlage SpO2-Sensor<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('puls').addEventListener('click', function () {
+document.getElementById('puls-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Checking for pulse<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('puls-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Pulskontrolle<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('hf').addEventListener('click', function () {
+document.getElementById('hf-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment of heart-rate<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('hf-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle der Herzfrequenz<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('rr').addEventListener('click', function () {
+document.getElementById('rr-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment of Blood-pressure<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('rr-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle des Blutdrucks<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('ekg').addEventListener('click', function () {
+document.getElementById('ekg-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment of ECG<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('ekg-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle/Ausdruck des EKG<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('recap').addEventListener('click', function () {
+document.getElementById('recap-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment of recap-time<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('recap-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle der Recap-Zeit<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('gcs').addEventListener('click', function () {
+document.getElementById('gcs-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Evaluation of GCS-Score<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('gcs-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle der GCS<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('bz').addEventListener('click', function () {
+document.getElementById('bz-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Blood-sugar assessment<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('bz-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle des BZ<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('fast').addEventListener('click', function () {
+document.getElementById('fast-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Evaluation of FAST-Score<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('fast-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Untersuchung nach FAST<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('verletzungen').addEventListener('click', function () {
+
+document.getElementById('verletzungen-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment/treatment of injuries<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('verletzungen-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle auf Verletzungen / deren Versorgung<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('temp').addEventListener('click', function () {
+document.getElementById('temp-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Assessment of body-temperature<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('temp-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Temperaturkontrolle<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('erkannt').addEventListener('click', function () {
+document.getElementById('erkannt-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Recognizing of cardiac-arrest<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('erkannt-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Reanimationspflichtigkeit erkannt<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('patches').addEventListener('click', function () {
+document.getElementById('patches-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Patches attached<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('patches-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Patches geklebt<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('schock').addEventListener('click', function () {
+document.getElementById('schock-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Shock initiated<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('schock-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Schock Abgegeben<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('analyse').addEventListener('click', function () {
+document.getElementById('analyse-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Analysis of cardiac-rhythm<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('analyse-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Rhythmusanalyse<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('supra').addEventListener('click', function () {
+document.getElementById('supra-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Administering of adrenaline 1mg/10ml<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('supra-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Gabe Adrenalin 1mg/10ml<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('amio').addEventListener('click', function () {
+document.getElementById('amio-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Administering of amiodarone 300/150mg<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('amio-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Gabe Amiodaron 300/150mg<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('tubus').addEventListener('click', function () {
+document.getElementById('tubus-en').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Intubation<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('rosc').addEventListener('click', function () {
-    if (lang == "en") {
-        	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | ROSC<br>";
-    } else {
-        logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | ROSC<br>";
+document.getElementById('tubus-de').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Intubation<br>";
 	document.getElementById('log-txt').innerHTML = logString;
-	}
 });
 
-document.getElementById('other').addEventListener('click', function () {
-	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | " + document.getElementById('andere').value + "<br>";
-	document.getElementById('andere').value = "";
+document.getElementById('rosc-en').addEventListener('click', function () {
+    logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | ROSC<br>";
+    document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('rosc-de').addEventListener('click', function () {
+    logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | ROSC<br>";
+    document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('other-en').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | " + document.getElementById('andere-en').value + "<br>";
+	document.getElementById('andere-en').value = "";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('other-de').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | " + document.getElementById('andere-de').value + "<br>";
+	document.getElementById('andere-de').value = "";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
@@ -322,3 +432,4 @@ function stopWatch() {
 		setTimeout(stopWatch, 10);
 	}
 }
+
