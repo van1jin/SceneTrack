@@ -14,7 +14,7 @@ You should have received a copy of the GNU General Public Licensealong with this
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=3.0">
-	<title>Scene Track ~ v.1.1</title>
+	<title>Scene Track ~ v.1.0</title>
 <style>
 body {
 	padding: 0;
@@ -89,7 +89,6 @@ body {
 
 .btn-task {
 	width: 150px;
-	height: 50px;
 	padding: 10px 15px;
 	margin: 2px 10px 5px 10px;
 	border-top-right-radius: 10px;
@@ -147,9 +146,9 @@ body {
 </style>
 </head>
 <body>
-	<div class="navbar">
+  <div class="navbar">
 <!-- Timer -->
-		<span><button class="btn-timer" id="start">
+    <span><button class="btn-timer" id="start">
 				Start</button></span>
 		<span class="digit" id="hr">
 			00</span>
@@ -166,252 +165,131 @@ body {
 				Stop</button></span>
 		<span><button class="btn-timer" id="reset">
 				Reset</button></span>
-	</div>
+  </div>
 	<div id="btn-de" style="display: block">
-		<div class="buttons">
-			<div id="categories" style="display: block">
-				<div>
-					<button class="btn-task" id="general-cat">
-						Basics</button>
-					<button class="btn-task" id="cpr-cat">
-						CPR</button>
-					<button class="btn-task" id="invasive-cat">
-						Invasiv</button>
-					<button class="btn-task" id="medication-cat">
-						Medis</button>
-				</div>
-				<br>
-				<div>
-					<button class="btn-task" id="airway-cat">
-						~A~</button>
-					<button class="btn-task" id="breathing-cat">
-						~B~</button>
-					<button class="btn-task" id="circulation-cat">
-						~C~</button>
-					<button class="btn-task" id="disability-cat">
-						~D~</button>
-					<button class="btn-task" id="environment-cat">
-						~E~</button>
-				</div>
-			</div>
-			<div id="back" style="display: none">
-				<button class="btn-task" id="btn-back">
-					Zurück</button>
-				<br>
-				<span style="color: white">.</span>
-			</div>
+	  <div class="buttons">
 <!-- Allgemeine Maßnahmen -->
-			<div id="general" style="display: none">
-				<button class="btn-task" id="ssss-de">
-					4S</button>
-				<button class="btn-task" id="notarzt-de">
-					NA</button>
-				<button class="btn-task" id="ansprache-de">
-					Ansprache</button>
-				<button class="btn-task" id="bewusstsein-de">
-					Bewusstein</button>
-				<button class="btn-task" id="sampler-de">
-					SAMPLER</button>
-				<button class="btn-task" id="opqrst-de">
-					OPQRST</button>
-				<button class="btn-task" id="reeval-de">
-					Reevaluation</button>
-				<button class="btn-task" id="tenften">
-					10for10</button>
-			</div>
-<!-- Invasive Maßnahmen -->
-			<div id="invasiv" style="display: none">
-				<button class="btn-task" id="ivzugang-de">
-					i.v.-Zugang</button>
-				<button class="btn-task" id="iozugang-de">
-					i.o.-Zugang</button>
-				<button class="btn-task" id="endotubus">
-					Endo.-Tubus</button>
-				<button class="btn-task" id="larynxtubus">
-					Larynxtubus</button>
-				<button class="btn-task" id="larynxmaske">
-					Larynxmaske</button>
-				<button class="btn-task" id="beckenschlinge" style="font-size: 18px">
-					Beckenschlinge</button>
-				<button class="btn-task" id="schrittmacher" style="font-size: 16px">
-					ext. Schrittmacher </button>
-				<button class="btn-task" id="kardioversion" style="font-size: 18px">
-					Kardioversion</button>
-				<button class="btn-task" id="thoraxdrainage" style="font-size: 18px">
-					Thoraxdrainage</button>
-				<button class="btn-task" id="thoraxpunktion" style="font-size: 18px">
-					Thoraxpunktion</button>
-				<button class="btn-task" id="tracheostoma">
-					Tracheostoma</button>
-			</div>
-<!-- Medis -->
-			<div id="medis" style="display: none">
-				<button class="btn-task" id="adrenalin-med">
-					Adrenalin</button>
-				<button class="btn-task" id="akrinor-med">
-					Akrinor</button>
-				<button class="btn-task" id="amiodaron-med">
-					Amiodaron</button>
-				<button class="btn-task" id="ammoniak-med" style="font-size: 14px">
-					Ammoniak- Riechstäbchen</button>
-				<button class="btn-task" id="ass-med">
-					ASS</button>
-				<button class="btn-task" id="atropin-med">
-					Atropin</button>
-				<br>
-				<button class="btn-task" id="butylscopolamin-med" style="font-size: 18px">
-					Butylscopolamin</button>
-				<br>
-				<button class="btn-task" id="clemastin-med">
-					Clemastin</button>
-				<br>
-				<button class="btn-task" id="diazepam-med">
-					Diazepam</button>
-				<button class="btn-task" id="dimenhydrinat-med" style="font-size: 18px">
-					Dimenhydrinat</button>
-				<br>
-				<button class="btn-task" id="esketamin-med">
-					Esketamin</button>
-				<br>
-				<button class="btn-task" id="fentanyl-med">
-					Fentanyl</button>
-				<button class="btn-task" id="flumazenil-med">
-					Flumazenil</button>
-				<button class="btn-task" id="furosemid-med">
-					Furosemid</button>
-				<br>
-				<button class="btn-task" id="glukose-med">
-					Glukose</button>
-				<button class="btn-task" id="nitro-med" style="font-size: 18px">
-					Glyceroltrinitrat</button>
-				<br>
-				<button class="btn-task" id="heparin-med">
-					Heparin</button>
-				<br>
-				<button class="btn-task" id="ibuprofen-med">
-					Ibuprofen</button>
-				<button class="btn-task" id="ipratropiumbromid-med" style="font-size: 14px">
-					Ipratropiumbromid</button>
-				<br>
-				<button class="btn-task" id="midazolam-med">
-					Midazolam</button>
-				<br>
-				<button class="btn-task" id="naloxon-med">
-					Naloxon</button>
-				<button class="btn-task" id="noradrenalin-med" style="font-size: 18px">
-					Noradrenalin</button>
-				<br>
-				<button class="btn-task" id="ondansetron-med" style="font-size: 18px">
-					Ondansetron</button>
-				<br>
-				<button class="btn-task" id="paracetamol-med" style="font-size: 18px">
-					Paracetamol</button>
-				<button class="btn-task" id="prednisolon-med" style="font-size: 18px">
-					Prednisolon</button>
-				<br>
-				<button class="btn-task" id="reproterol-med" style="font-size: 18px">
-					Reproterol</button>
-				<br>
-				<button class="btn-task" id="salbutamol-med" style="font-size: 18px">
-					Salbutamol</button>
-				<br>
-				<button class="btn-task" id="tranexamsäure-med" style="font-size: 18px">
-					Tranexamsäure</button>
-				<br>
-				<button class="btn-task" id="urapidil-med">
-					Urapidil</button>
-			</div>
+		  <div class="general">
+			  <button class="btn-task" id="ssss-de">
+				  4S</button>
+			  <button class="btn-task" id="notarzt-de">
+				  NA</button>
+			  <button class="btn-task" id="ansprache-de">
+				  Ansprache</button>
+			  <button class="btn-task" id="bewusstsein-de">
+				  Bewusstein</button>
+			  <button class="btn-task" id="sampler-de">
+				  SAMPLER</button>
+			  <button class="btn-task" id="opqrst-de">
+				  OPQRST</button>
+			  <button class="btn-task" id="reeval-de">
+				  Reevaluation</button>
+			  <button class="btn-task" id="zugang-de">
+				  iv/io-Zugang</button>
+		  </div>
+		  <br>
+<!-- Kritische Blutungen / x/c-Maßnahmen -->
+		  <div class="x">
+			  <button class="btn-task" id="critical-de">
+				  Blutung?</button>
+		  </div>
+		  <br>
 <!-- Atemwegs-Probleme / A-Maßnahmen -->
-			<div id="a" style="display: none">
-				<button class="btn-task" id="atemweg-de">
-					Atemweg?</button>
+		  <div class="a">
+			  <button class="btn-task" id="atemweg-de">
+				  Atemweg?</button>
 				<button class="btn-task" id="absaugen">
-					Absaugen</button>
+				  Absaugen</button>
 				<button class="btn-task" id="aw-hilfe">
-					Guedel/Wendl</button>
-			</div>
+				  Guedel/Wendl</button>
+		  </div>
+		  <br>
 <!-- Atmungs-Probleme / B-Maßnahmen -->
-			<div id="b" style="display: none">
-				<button class="btn-task" id="af-de">
-					AF</button>
-				<button class="btn-task" id="auskultation-de">
-					Auskultation</button>
-				<button class="btn-task" id="spo-de">
-					SpO2</button>
+		  <div class="b">
+			  <button class="btn-task" id="af-de">
+				  AF</button>
+			  <button class="btn-task" id="auskultation-de">
+				  Auskultation</button>
+			  <button class="btn-task" id="spo-de">
+				  SpO2</button>
 				<button class="btn-task" id="ass-beatmung">
-					ass BMV</button>
-			</div>
+				  ass BMV</button>
+		  </div>
+		  <br>
 <!-- Krislauf-Probleme / C-Maßnahmen -->
-			<div id="c" style="display: none">
-				<button class="btn-task" id="puls-de">
-					Puls?</button>
-				<button class="btn-task" id="hf-de">
-					HF</button>
-				<button class="btn-task" id="rr-de">
-					RR</button>
-				<button class="btn-task" id="ekg-de">
-					EKG</button>
-				<button class="btn-task" id="recap-de">
-					Recap</button>
-			</div>
+		  <div class="c">
+			  <button class="btn-task" id="puls-de">
+				  Puls?</button>
+			  <button class="btn-task" id="hf-de">
+				  HF</button>
+			  <button class="btn-task" id="rr-de">
+				  RR</button>
+			  <button class="btn-task" id="ekg-de">
+				  EKG</button>
+			  <button class="btn-task" id="recap-de">
+				  Recap</button>
+		  </div>
+		  <br>
 <!-- Neurologische Probleme / D-Maßnahmen -->
-			<div id="d" style="display: none">
-				<button class="btn-task" id="gcs-de">
-					GCS</button>
-				<button class="btn-task" id="bz-de">
-					BZ</button>
-				<button class="btn-task" id="fast-de">
-					FAST</button>
+		  <div class="d">
+			  <button class="btn-task" id="gcs-de">
+				  GCS</button>
+			  <button class="btn-task" id="bz-de">
+				  BZ</button>
+			  <button class="btn-task" id="fast-de">
+				  FAST</button>
 				<button class="btn-task" id="pupillen">
-					Pupillen</button>
-			</div>
+				  Pupillen</button>
+		  </div>
+		  <br>
 <!-- Verletzungen / E-Maßnahmen -->
-			<div id="e" style="display: none">
-				<button class="btn-task" id="temp-de">
-					Temperatur</button>
-				<button class="btn-task" id="verletzungen-de">
-					Verletzungen?</button>
-				<button class="btn-task" id="hws-immo">
-					HWS-Stütze</button>
-			</div>
+		  <div class="e">
+		    <button class="btn-task" id="temp-de">
+				  Temperatur</button>
+			  <button class="btn-task" id="verletzungen-de">
+				  Verletzungen?</button>
+			  <button class="btn-task" id="hws-immo">
+				  HWS-Stütze</button>
+		  </div>
+		  <br>
 <!-- Reanimationsmaßnahmen -->
-			<div id="rea" style="display: none">
-				<button class="btn-task" id="erkannt-de">
-					Rea erkannt</button>
-				<button class="btn-task" id="patches-de">
-					Patches</button>
-				<button class="btn-task" id="schock-de">
-					Schock</button>
-				<button class="btn-task" id="analyse-de">
-					Analyse</button>
-				<button class="btn-task" id="supra-de">
-					Adrenalin</button>
-				<button class="btn-task" id="amio-de">
-					Amiodaron</button>
-				<button class="btn-task" id="tubus-de">
-					Intubation</button>
-				<button class="btn-task" id="rosc-de">
-					ROSC</button>
-			</div>
-		</div>
-		<br>
+		  <div class="rea">
+			  <button class="btn-task" id="erkannt-de">
+				  Rea erkannt</button>
+			  <button class="btn-task" id="patches-de">
+				  Patches</button>
+			  <button class="btn-task" id="schock-de">
+				  Schock</button>
+			  <button class="btn-task" id="analyse-de">
+				  Analyse</button>
+			  <button class="btn-task" id="supra-de">
+				  Adrenalin</button>
+			  <button class="btn-task" id="amio-de">
+				  Amiodaron</button>
+			  <button class="btn-task" id="tubus-de">
+				  Intubation</button>
+			  <button class="btn-task" id="rosc-de">
+				  ROSC</button>
+		  </div>
+	  </div>
+	  <br>
 <!-- Sonstige Eingaben / Maßnahmen / Notizen -->
-		<div style="font-size: 25px; padding: 0px 0px 0px 20px" class="others">
-			<label for="andere">Andere Eingaben:</label>
-			<input type="text" id="andere-de" name="andere" style="font-size: 20px">
-			<button style="font-size: 20px" id="other-de">
-				Enter</button>
-		</div>
+	  <div style="font-size: 25px; padding: 0px 0px 0px 20px" class="others">
+		  <label for="andere">Andere Eingaben:</label>
+		  <input type="text" id="andere-de" name="andere" style="font-size: 20px">
+		  <button style="font-size: 20px" id="other-de">
+			  Enter</button>
+	  </div>
 	</div>
 	<br>
 	<div class="log">
-		<h1 class="clog">Time Log</h1>
-		<span class="clog-txt" id="log-txt">
-		</span>
-	</div>
-	<br>
+	  <h1 class="clog">Time Log</h1>
+	  <span class="clog-txt" id="log-txt">
+	  </span>
+  </div>
+  <br>
 <!-- License / Footer -->
-	<span class="footer"><p>This app is published under the <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">GNU General Public License Version 3</a></p></span>
+  <span class="footer"><p>This app is published under the <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">GNU General Public License Version 3</a></p></span>
 <script>
 let startBtn = document.getElementById('start');
 let stopBtn = document.getElementById('stop');
@@ -455,73 +333,6 @@ document.getElementById('andere-de').addEventListener('keypress', function(event
     }
 });
 
-document.getElementById('general-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('general').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('cpr-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('rea').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('invasive-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('invasiv').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('medication-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('medis').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('airway-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('a').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('breathing-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('b').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('circulation-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('c').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-document.getElementById('disability-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('d').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('environment-cat').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "none";
-  document.getElementById('e').style.display = "block";
-  document.getElementById('back').style.display = "block";
-});
-
-document.getElementById('btn-back').addEventListener('click', function () {
-  document.getElementById('categories').style.display = "block";
-  document.getElementById('general').style.display = "none";
-  document.getElementById('rea').style.display = "none";
-  document.getElementById('invasiv').style.display = "none";
-  document.getElementById('medis').style.display = "none";
-  document.getElementById('a').style.display = "none";
-  document.getElementById('b').style.display = "none";
-  document.getElementById('c').style.display = "none";
-  document.getElementById('d').style.display = "none";
-  document.getElementById('e').style.display = "none";
-  document.getElementById('back').style.display = "none";
-});
-
 document.getElementById('ssss-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | 4S<br>";
 	document.getElementById('log-txt').innerHTML = logString;
@@ -557,8 +368,13 @@ document.getElementById('reeval-de').addEventListener('click', function () {
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
-document.getElementById('ivzugang-de').addEventListener('click', function () {
+document.getElementById('zugang-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Anlage i.v./i.o.-Zugang<br>";
+	document.getElementById('log-txt').innerHTML = logString;
+});
+
+document.getElementById('critical-de').addEventListener('click', function () {
+	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | Kontrolle kritischer Blutungen<br>";
 	document.getElementById('log-txt').innerHTML = logString;
 });
 
@@ -701,19 +517,6 @@ document.getElementById('other-de').addEventListener('click', function () {
 	logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | " + document.getElementById('andere-de').value + "<br>";
 	document.getElementById('andere-de').value = "";
 	document.getElementById('log-txt').innerHTML = logString;
-});
-
-document.getElementById('ass-med').addEventListener('click', function () {
-	let text;
-	let dosis = prompt("Dosis:", "");
-	if (dosis == null || dosis == "") {
-		text = "User cancelled the prompt.";
-	} else {
-		let verab = prompt("Verabreichungsform:", "");
-		logString = logString + ">>> " + hour + ":" + minute + ":" + second + " | ASS - " + dosis + " - " + verab + "<br>";
-		document.getElementById('andere-de').value = "";
-		document.getElementById('log-txt').innerHTML = logString;
-	}
 });
 
 function stopWatch() {
